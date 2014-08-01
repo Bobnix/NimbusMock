@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>BadAuthException</members>
+        <members>Matcher</members>
+        <members>MockFactory</members>
+        <members>MockMaker</members>
+        <members>NimbusMock</members>
+        <members>OrderService</members>
+        <members>OrderServiceTest</members>
+        <members>PaymentInterface</members>
+        <members>PaymentTimeoutException</members>
+        <name>ApexClass</name>
+    </types>
+    <version>28.0</version>
+</Package>
