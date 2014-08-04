@@ -32,9 +32,9 @@ ServiceInterface mock = new MockFactory.MockService();
 
 From there, you need to tell the mock what to return or throw when a call is made with some combination of parameters. The base is the same in both cases, calling the `when` static method on NimbusMock and pass it the call to the mock method with the parameters you expect. After that you either chain `thenReturn` or `thenThrow` depending on what you want it to do. When put together, it looks something like this:
 
-```javascript
-NimbusMock.when(mock.methodOne('value')).thenReturn('other value');
-NimbusMock.when(mock.methodTwo('other value')).thenThrow(New CustomException());
+```java
+NimbusMock.when(mock.methodOne(1)).thenReturn(2);
+NimbusMock.when(mock.methodTwo(2)).thenThrow(New CustomException());
 ```
 
 ##TODO
