@@ -30,12 +30,17 @@ Creating an instance of your mock is as easy as any regular class. For example:
 ServiceInterface mock = new MockFactory.MockService();
 ```
 
-From there, you need to tell the mock what to return or throw when a call is made with some combination of parameters. The base is the same in both cases, calling the `when` static method on NimbusMock and pass it the call to the mock method with the parameters you expect. After that you either chain 'thenReturn' or 'thenThrow' depending on what you want it to do. When put together, it looks something like this:
+From there, you need to tell the mock what to return or throw when a call is made with some combination of parameters. The base is the same in both cases, calling the `when` static method on NimbusMock and pass it the call to the mock method with the parameters you expect. After that you either chain `thenReturn` or `thenThrow` depending on what you want it to do. When put together, it looks something like this:
 
-```java
+```javascript
 NimbusMock.when(mock.methodOne('value')).thenReturn('other value');
 NimbusMock.when(mock.methodTwo('other value')).thenThrow(New CustomException());
 ```
+
+##TODO
+* A generator for the mocks. I plan on writing this in apex and letting the devloper write up a script calling it with a list of classes they want mocked
+* The ability to set how many times the same call can be made and to see how many times a call is used after the fact
+* Mocking classes without interfaces. This isn't that hard, I just need to settle on how I want to go about it
 
 ##Change Log
 This is the first version, everything has changed
